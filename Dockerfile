@@ -33,6 +33,7 @@ RUN set -ex \
     && echo "$(which zsh)" | lchsh rootless
 
 COPY start-userland.sh /usr/local/bin/
+COPY run-shell.sh /usr/local/bin/
 
 COPY --from=builder /bin/git-userland /bin/git-userland
 
