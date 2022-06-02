@@ -19,7 +19,7 @@ RUN set -ex \
         emacs-nox \
         less \
         libuser \
-    && apk add --no-cache curl git \
+    && apk add --no-cache curl git terraform \
     && su rootless -c 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"' \
     && sed -i s/robbyrussell/gianu/g /home/rootless/.zshrc \
     && curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash \
